@@ -1,0 +1,10 @@
+['{"leader": {"timestamp": 1557473000, "password": "abc", "member": 1}}',
+'{"leader": {"timestamp": 1557473004, "password": "kot", "member": 2}}',
+'{"leader": {"timestamp": 1557473008, "password": "123", "member": 3}}',
+'{"protest": {"timestamp": 1557475700, "password": "123", "member": 3, "action": 500, "project": 5000, "authority": 1}}',
+'{"support": {"timestamp": 1557475701, "password": "123", "member": 3, "action": 600, "project": 5000}}',
+'{"support": {"timestamp": 1557475701, "password": "abc", "member": 1, "action": 601, "project": 5001, "authority": 2}}',
+'{"support": {"timestamp": 1557475701, "password": "abc", "member": 1, "action": 602, "project": 5002, "authority": 3}}',
+'{"support": {"timestamp": 1557475701, "password": "cztery", "member": 4, "action": 700, "project": 5000}}',
+'{"protest": {"timestamp": 1557475721, "password": "piec", "member": 5, "action": 701, "project": 5000}}'
+]
