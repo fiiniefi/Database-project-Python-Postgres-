@@ -17,7 +17,7 @@ class PostgresAPI:
         self.connection = None
         self.cursor = None
 
-    def open(self, database, user, password, host='localhost'):
+    def open(self, database, user, password, host='localhost', db_path='database/db_definition.sql'):
         """
         Establishes connection with database using credentials given in parameters.
         Also constructs database with 'db_definition.sql' file from current project
@@ -26,11 +26,12 @@ class PostgresAPI:
         :param str user: user opening database
         :param str password: password to user's account
         :param str host: place where database server is hosted. Defaults to 'localhost'
+        :param str db_path: path to database model (.sql) file (optional)
         """
         self.connection = psycopg2.connect(database=database, user=user,
                                            password=password, host=host)
         self.cursor = self.connection.cursor()
-        self.cursor.execute(open("db_definition.sql").read())
+        self.cursor.execute(open(db_path).read())
 
     def leader(self, timestamp, password, member):
         """
